@@ -1,0 +1,13 @@
+Model:
+    name: "MGFNet"
+    channels: 256
+    output_stride: 16
+    pretrained: True
+
+
+Eval:
+    gt_root: "data/TestDataset"
+    pred_root: "/home/input/MGFNet/result_map/"
+    result_path: "results"
+    datasets:   ['CVC-300', 'CVC-ClinicDB', 'Kvasir', 'CVC-ColonDB', 'ETIS-LaribPolypDB']
+    metrics: ['meanDic', 'meanIoU', 'wFm', 'Sm', 'meanEm', 'mae', 'maxEm', 'maxDic', 'maxIoU', 'meanSen', 'maxSen', 'meanSpe', 'maxSpe']
